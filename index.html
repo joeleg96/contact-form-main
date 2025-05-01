@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+  
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+  <main>
+    <div class="flex-container">
+      <div class="contact-container">
+        <form>
+          <h1>Contact Us</h1>
+          <div class="user-info-container">
+            <p>
+            <label class="label-title" for="first name">First Name <span class="asterisk">*</span></label>
+            <input type="text" id="first-name" name="first-name" aria-required="true" autocomplete="given-name"/>
+          </p>
+          <p class="last-name-container">
+            <label class="label-title" for="last name">Last Name <span class="asterisk">*</span></label>
+            <input type="text" id="last-name" name="last-name" aria-required="true" autocomplete="family-name"/>
+          </p>
+          <p class="email-container">
+            <label class="label-title" for="email">Email Address <span class="asterisk">*</span></label>
+            <input type="email" id="email" name="email" aria-required="true" autocomplete="email"/>
+          </p>
+          </div>
+          <legend id="legend">Query Type <span class="asterisk">*</span></legend>
+          <div class="query-container">
+            <div class="general-enquiry-container">
+              <input class="radio-btn general-enquiry-btn" type="radio" name="query-answer" />
+            <label class="radio-btn-text">General Enquiry</label>
+            </div>
+            <div class="support-container">
+              <input class="radio-btn support-btn" type="radio" name="query-answer" />
+            <label class="radio-btn-text">Support Request</label>
+            </div>
+          </div>
+          <div class="message-container">
+            <p>
+              <label class="label-title">Message <span class="asterisk">*</span></label>
+              <textarea id="message" aria-required="true"></textarea>
+            </p>
+          </div>
+          <div class="consent-container">
+            <input type="checkbox" id="consent-btn" aria-required="true"/>
+            <label class="consent-text"> I consent to being contacted by the team <span class="asterisk">*</span> 
+            </label>
+          </div>
+          <div class="submit-btn-container">
+            <button class="submit-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  
+
+  <!-- This field is required
+
+  Please select a query type
+
+  Message
+  This field is required
+
+ 
+
+  Submit
+
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon! -->
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+  <script src="./index.js" charset="UTF-8"></script>
+</body>
+</html>
