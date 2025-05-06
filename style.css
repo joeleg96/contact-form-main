@@ -240,7 +240,7 @@ textarea {
         margin-right: 1rem;
     }
 
-    .general-enquiry-container:hover, .support-container:hover, .radio-btn-text:hover {
+    .general-enquiry-container:hover, .support-container:hover, .radio-btn-text:hover, #first-name, #last-name, #email, #message, .submit-btn {
         cursor: pointer;
     }
 
@@ -264,5 +264,9 @@ textarea {
 
     .submit-btn {
         width: 39rem;
+    }
+
+    .submit-btn:hover {
+        background-color: var(--grey-900);
     }
 }
