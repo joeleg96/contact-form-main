@@ -225,7 +225,7 @@ textarea {
 
   /* Error States */
   .error-msg {
-    color:#D73C3C;
+    color: var(--red-errors);
 }
 
 .first-name-error, .last-name-error, .email-error {
@@ -245,9 +245,13 @@ textarea {
     margin-left: 1.5rem;
 }
 
-/* .hide {
+.hide {
     display: none;
-} */
+}
+
+.red-border {
+    border-color: var(--red-errors);
+}
 
 @media screen and (min-width: 768px ) {
     .contact-container {
@@ -292,6 +296,7 @@ textarea {
     .general-enquiry-container {
         margin-left: 2rem;
         margin-right: 1.5rem;
+        margin-bottom: .5rem;
     }
 
     .support-container {
@@ -305,7 +310,8 @@ textarea {
 
     .message-container {
         margin-left: .5rem;
-        margin-right: .5rem; 
+        margin-right: .5rem;
+        margin-top: 1rem; 
     }
 
     #message {

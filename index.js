@@ -1,6 +1,7 @@
 const generalEnquiryButton = $(".general-enquiry-btn");
 const supportButton = $(".support-btn");
 const consentButton = $("#consent-btn");
+const queryButton = $(".radio-btn");
 
 // General Enquiry Button
 $(".enquiry-text").on("click", function() {
@@ -34,3 +35,91 @@ $(".consent-text").on("click", function() {
     $(consentButton)[0].checked = !consentButton[0].checked;   
 });
 
+$(document).ready(function() {
+    $("#first-name").on("blur", function() {
+      if ($(this).val() === "") {
+        $(".first-name-error").removeClass("hide");
+      } else {
+        $(".first-name-error").addClass("hide");
+      }
+    });
+
+    $("#last-name").on("blur", function() {
+        if ($(this).val() === "") {
+          $(".last-name-error").removeClass("hide");
+        } else {
+            $(".last-name-error").addClass("hide");
+        }
+      });
+  
+    $("#email").on("blur", function() {
+      if ($(this).val() === "") {
+        $(".email-error").removeClass("hide");
+      } else if (!isValidEmail($(this).val())) {
+        $(".email-error").text("Please enter a valid email address");
+        $(".email-error").removeClass("hide");
+      } else {
+        $(".email-error").addClass("hide");
+      }
+    });
+
+    $("#message").on("blur", function() {
+        if ($(this).val() === "") {
+            $(".message-input-error").removeClass("hide");
+        }
+        else {
+            $(".message-input-error").addClass("hide");
+        }
+    })
+
+    // $(queryButton).on("click", function() {
+    //     $(".query-error").addClass("hide");
+    // })
+
+    // $(consentButton).on("click", function() {
+    //     $(".consent-error").addClass("hide");
+    // })
+
+    $("#my-form").submit(function(event) {
+      let isValid = true;
+      if ($("#first-name").val() === "") {
+        $(".first-name-error").removeClass("hide");
+        isValid = false;
+      }
+      if ($("#last-name").val() === "") {
+        $(".last-name-error").removeClass("hide");
+        isValid = false;
+      }
+      if ($("#email").val() === "") {
+         $(".email-error").removeClass("hide");
+         isValid = false;
+      } else if (!isValidEmail($("#email").val())) {
+         $("#emailError").text("Invalid email format");
+         isValid = false;
+      }
+      if ($("#message").val() === "") {
+        $(".message-input-error").removeClass("hide");
+        isValid = false;
+      }
+    //   if (!queryButton.checked) {
+    //     $(".query-error").removeClass("hide");
+    //     isValid = false;
+    //   }
+    //   if (!consentButton.checked) {
+    //      $(".consent-error").removeClass("hide");
+    //      isValid = false;
+    //   } 
+    
+      if (!isValid) {
+        event.preventDefault();
+      } else {
+        alert("thank you");
+      }
+
+    });
+  
+    function isValidEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+  });
