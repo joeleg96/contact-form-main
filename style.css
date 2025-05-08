@@ -42,10 +42,11 @@ body {
 .contact-container {
     background-color: var(--white);
     width: 21.4rem;
-    height: 67.125rem;
+    height: min-content;
     border-radius: .825rem;
     margin-top: 2rem;
-    margin-bottom: 2rem; 
+    margin-bottom: 2rem;
+    padding-bottom: 1rem; 
 }
 
 h1 {
@@ -99,6 +100,10 @@ p {
     margin-bottom: 1rem;
 }
 
+.query-container {
+    margin-bottom: .5rem;
+}
+
 .general-enquiry-container, .support-container {
     width: 18.5rem;
     height: 3.2rem;
@@ -122,6 +127,7 @@ p {
     margin-left: 1rem;
     margin-right: .5rem;
     cursor: pointer;
+    accent-color: var(--green-600);
 }
 
 .radio-btn-text {
@@ -146,6 +152,10 @@ p {
     letter-spacing: var(--body-reg-letter-spacing);
 }
 
+.message-p {
+    margin-bottom: .5rem;
+}
+
 textarea {
     resize: none;
 }
@@ -154,15 +164,17 @@ textarea {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 2rem;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+    margin-bottom: .5rem;
 }
 
 #consent-btn {
     width: 1.5rem;
     height: 1.5rem;
     margin-right: 1rem;
-
+    accent-color: var(--green-600);
 }
 
 .consent-text {
@@ -190,6 +202,52 @@ textarea {
     letter-spacing: var(--body-reg-letter-spacing);
     font-weight: bold;
 }
+
+#first-name:hover, #last-name:hover, #email:hover, .general-enquiry-container:hover, .support-container:hover {
+    border-color: #0C7D69;
+}
+
+#first-name:focus, #last-name:focus, #email:focus, #message:focus{
+    outline: none !important;
+    border: 1px solid var(--green-600);
+}
+
+.general-enquiry-container:focus {
+    background-color:#0C7D69;
+}
+
+.green-background {
+    background-color: rgb(12, 125, 105, .3);
+    border-color: #0C7D69;
+}
+
+
+
+  /* Error States */
+  .error-msg {
+    color:#D73C3C;
+}
+
+.first-name-error, .last-name-error, .email-error {
+    margin-top: .5rem;
+}
+
+.query-error {
+    margin-left: 1.5rem;
+}
+
+.message-input-error {
+    margin-left: 1.5rem;
+}
+
+.consent-error {
+    display: flex;
+    margin-left: 1.5rem;
+}
+
+/* .hide {
+    display: none;
+} */
 
 @media screen and (min-width: 768px ) {
     .contact-container {
@@ -228,6 +286,7 @@ textarea {
         flex-direction: row;
         margin-left: 0rem;
         margin-right: 0rem;
+        margin-bottom: 0rem;
     }
 
     .general-enquiry-container {
@@ -246,7 +305,7 @@ textarea {
 
     .message-container {
         margin-left: .5rem;
-        margin-right: .5rem;
+        margin-right: .5rem; 
     }
 
     #message {
@@ -255,7 +314,7 @@ textarea {
 
     .consent-container {
         margin-left: 2rem;
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
 
     .submit-btn-container {
@@ -268,5 +327,18 @@ textarea {
 
     .submit-btn:hover {
         background-color: var(--grey-900);
+    }
+
+    /* Error States */
+    .query-error {
+        margin-left: 2rem;
+    }
+    
+    .message-input-error {
+        margin-left: 2rem;
+    }
+    
+    .consent-error {
+        margin-left: 2rem;
     }
 }
