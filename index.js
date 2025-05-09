@@ -127,7 +127,8 @@ $(document).ready(function() {
       if (!isValid) {
         event.preventDefault();
       } else {
-        alert("thank you");
+        event.preventDefault();
+        $(".success-container").show();
       }
 
     });

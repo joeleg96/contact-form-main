@@ -35,9 +35,49 @@ body {
 
 .flex-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+.success-container {
+    position: relative;
+    top: 10rem;
+    left: .5rem;
+    width: 20.5rem;
+    height: min-content;
+    background-color: #2A4144;
+    border-radius: .825rem;
+    padding: 2rem;
+}
+
+.flex-title-success {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.success-title {
+    font-size: var(--body-bold-size);
+    letter-spacing: var(--body-bold-letter-spacing);
+    line-height: var(--body-bold-line-height);
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    margin-left: .5rem;
+}
+
+.success-message {
+    font-size: var(--body-sm-size);
+    line-height: var(--body-sm-line-height);
+    letter-spacing: var(--body-sm-letter-spacing);
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+
 
 .contact-container {
     background-color: var(--white);
