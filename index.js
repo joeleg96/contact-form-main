@@ -44,6 +44,7 @@ $(document).ready(function() {
         $(".first-name-error").removeClass("hide");
       } else {
         $(".first-name-error").addClass("hide");
+        $(".first-name").removeClass("red-border")
       }
     });
 
@@ -52,6 +53,7 @@ $(document).ready(function() {
           $(".last-name-error").removeClass("hide");
         } else {
             $(".last-name-error").addClass("hide");
+            $(".last-name").removeClass("red-border")
         }
       });
   
@@ -63,6 +65,7 @@ $(document).ready(function() {
         $(".email-error").removeClass("hide");
       } else {
         $(".email-error").addClass("hide");
+        $(".email").removeClass("red-border")
       }
     });
 
@@ -72,6 +75,7 @@ $(document).ready(function() {
         }
         else {
             $(".message-input-error").addClass("hide");
+            $(".message").removeClass("red-border");
         }
     })
 
@@ -91,14 +95,17 @@ $(document).ready(function() {
       let isValid = true;
       if ($("#first-name").val() === "") {
         $(".first-name-error").removeClass("hide");
+        $(".first-name").addClass("red-border");
         isValid = false;
       }
       if ($("#last-name").val() === "") {
         $(".last-name-error").removeClass("hide");
+        $(".last-name").addClass("red-border");
         isValid = false;
       }
       if ($("#email").val() === "") {
          $(".email-error").removeClass("hide");
+         $(".email").addClass("red-border");
          isValid = false;
       } else if (!isValidEmail($("#email").val())) {
          $("#emailError").text("Invalid email format");
@@ -106,6 +113,7 @@ $(document).ready(function() {
       }
       if ($("#message").val() === "") {
         $(".message-input-error").removeClass("hide");
+        $(".message").addClass("red-border");
         isValid = false;
       }
       if (!generalEnquiryButton.prop("checked") && !supportButton.prop("checked")) {

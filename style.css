@@ -83,11 +83,15 @@ p {
     width: auto;
     height: 3.2rem;
     border-radius: .825rem;
-    border: 1px solid var(--grey-500);
+    
     padding-left: 1rem;
     font-size: var(--body-reg-size);
     line-height: var(--body-reg-line-height);
     letter-spacing: var(--body-reg-letter-spacing); 
+}
+
+.first-name, .last-name, .email, .message {
+    border: 1px solid var(--grey-500);
 }
 
 #legend {
@@ -145,7 +149,6 @@ p {
 #message {
     height: 15rem;
     border-radius: .825rem;
-    border: 1px solid var(--grey-500);
     padding-left: 1rem;
     font-size: var(--body-reg-size);
     line-height: var(--body-reg-line-height);
@@ -250,6 +253,7 @@ textarea {
 }
 
 .red-border {
+    outline: none !important;
     border-color: var(--red-errors);
 }
 
