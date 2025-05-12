@@ -34,6 +34,7 @@ body {
 }
 
 .flex-container {
+    height: min-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,9 +42,11 @@ body {
 }
 
 .success-container {
-    position: relative;
-    top: 10rem;
-    left: .5rem;
+    position: fixed;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
     width: 20.5rem;
     height: min-content;
     background-color: #2A4144;
